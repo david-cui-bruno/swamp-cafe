@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Fenway Park JF";
+  src: url("/Fenway Park JF Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Font families */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-fenway: "Fenway Park JF", "Playfair Display", Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* Primary: Swamp White (neutral scale) */
+  --color-primary-50: #ffffff;
+  --color-primary-100: #fafafa;
+  --color-primary-200: #f4f4f5;
+  --color-primary-300: #e9e9eb;
+  --color-primary-400: #dcdce0;
+  --color-primary-500: #cfcfd6;
+  --color-primary-600: #a1a1aa;
+  --color-primary-700: #71717a;
+  --color-primary-800: #3f3f46;
+  --color-primary-900: #18181b;
+
+  /* Secondary: Bayou Purple */
+  --color-purple-50: #f6f2ff;
+  --color-purple-100: #e9e0ff;
+  --color-purple-200: #d3c2ff;
+  --color-purple-300: #b69bff;
+  --color-purple-400: #9b74ff;
+  --color-purple-500: #7c52e8;
+  --color-purple-600: #6037c2;
+  --color-purple-700: #47299a;
+  --color-purple-800: #301d70;
+  --color-purple-900: #1d1247;
+
+  /* Secondary: Swamp Green */
+  --color-green-50: #f2fbf5;
+  --color-green-100: #ddf5e6;
+  --color-green-200: #bcead0;
+  --color-green-300: #8fd8b2;
+  --color-green-400: #5fc18e;
+  --color-green-500: #37a96e;
+  --color-green-600: #278453;
+  --color-green-700: #1d6440;
+  --color-green-800: #13452c;
+  --color-green-900: #0b2b1b;
+
+  /* Secondary: Cajun Yellow */
+  --color-yellow-50: #fffbea;
+  --color-yellow-100: #fff3c4;
+  --color-yellow-200: #ffe68a;
+  --color-yellow-300: #ffd84d;
+  --color-yellow-400: #f7c61b;
+  --color-yellow-500: #e5b200;
+  --color-yellow-600: #b58900;
+  --color-yellow-700: #8c6800;
+  --color-yellow-800: #614800;
+  --color-yellow-900: #3b2b00;
+
+  /* Semantic ink colors */
+  --color-ink: #121212;
+  --color-muted-ink: #52525b;
+  --color-subtle-ink: #71717a;
+
+  /* Surface colors */
+  --color-surface: #ffffff;
+  --color-surface-dim: #f4f4f5;
+  --color-surface-dark: #18181b;
+  --color-surface-dark-dim: #27272a;
+
+  /* Editorial hero palette */
+  --color-blush: #FFF8E1;
+  --color-burgundy: #47299a;
+  --color-dusty-red: #B25759;
+  --color-warm-hairline: #E7D2D2;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+  }
+
+  /* Hatched hero text: hollow letterforms with diagonal stripe fill */
+  .hero-hatched-text {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-green-600);
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color-green-600) 0px,
+      var(--color-green-600) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @media (min-width: 768px) {
+    .hero-hatched-text {
+      -webkit-text-stroke: 2px var(--color-green-600);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-hatched-text {
+      -webkit-text-stroke: 2.5px var(--color-green-600);
+    }
+  }
+
+  /* Animated Mardi Gras strip */
+  .mardi-gras-strip {
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--color-green-600) 0px,
+      var(--color-green-600) 40px,
+      var(--color-yellow-400) 40px,
+      var(--color-yellow-400) 80px,
+      var(--color-purple-600) 80px,
+      var(--color-purple-600) 120px
+    );
+    background-size: 360px 4px;
+    animation: mardi-scroll 8s linear infinite;
+  }
+
+  @keyframes mardi-scroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 360px 0;
+    }
+  }
+
+  /* Hide scrollbar on carousel containers */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
