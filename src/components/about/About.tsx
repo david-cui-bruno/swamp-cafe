@@ -23,7 +23,7 @@ export function About() {
           <img
             src="/story.jpeg"
             alt="Our Story"
-            className="w-full max-h-80 rounded-xl object-cover md:max-h-128"
+            className="w-full rounded-xl object-contain md:max-h-128 md:object-cover"
           />
         </div>
       </div>

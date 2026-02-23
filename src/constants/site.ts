@@ -11,7 +11,7 @@ export const SITE_HOURS = {
   monWed: "Mon – Wed: 11AM – 3PM, 5 – 9PM",
   thursday: "Thu: 11AM – 3PM, 5 – 9PM",
   friday: "Fri: 11AM – 3PM, 5 – 10PM",
-  saturday: "Sat: 11AM – 10PM",
+  saturday: "Sat: 12PM – 10PM",
   sunday: "Sun: 12PM – 6PM",
 };
 
