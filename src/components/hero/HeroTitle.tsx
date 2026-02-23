@@ -13,7 +13,7 @@ export function HeroTitle() {
         Laissez les bon temps rouler!
       </p>
       <a
-        href="#"
+        href="tel:+14699865555"
         className="mt-8 inline-flex items-center justify-center rounded-sm border border-white/70
                    bg-purple-700 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em]
                    text-white transition-colors hover:bg-white hover:text-purple-700
