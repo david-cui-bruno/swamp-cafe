@@ -29,6 +29,6 @@ export const SITE_CHEF_OWNER = {
 
 export const SITE_RESERVATION_URL = "tel:+14699865555";
 
-export const SITE_FACEBOOK_URL = "https://www.facebook.com/swamp.cafe";
+export const SITE_FACEBOOK_URL = "https://www.facebook.com/swamp.cafe.tx";
 export const SITE_INSTAGRAM_URL = "https://www.instagram.com/swamp.cafe";
 export const SITE_GITHUB_URL = "https://github.com/david-cui-bruno";
